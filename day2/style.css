@@ -1,0 +1,25 @@
+p {
+  color: blue;
+}
+
+.one {
+  color: red;
+}
+
+.two {
+  color: green;
+}
+
+h2.title-one{
+  color: brown;
+  font-size: 35px;
+}
+
+foot h2.title-two{
+  color: black;
+  font-size: 45px;
+}
+
+div h1{
+  font-size: 75px;
+}
