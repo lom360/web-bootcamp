@@ -15,7 +15,6 @@
   width: 50px;
   border: 1px solid blue;
   text-align: center;
-  padding: 20px;
 }
 
 .left {
@@ -64,4 +63,15 @@
 
 .center {
     margin: 0 auto;
+}
+
+/*Section Four*/
+.four {
+    border-bottom: 2px solid black;
+    padding: 50px;
+    height: 130px;
+}
+
+.four .clear-right{
+    margin-top: 52px;
 }
