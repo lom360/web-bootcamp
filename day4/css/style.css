@@ -67,11 +67,10 @@
   background-color: yellow;
 }
 
-.top {
+.left {
   float: left;
 }
 
-.bot {
-  float: left;
-  display: block;
+.clear-left {
+  clear: left;
 }
