@@ -1,8 +1,16 @@
+.center {
+  text-align: center;
+  color: white;
+  background-color: pink;
+}
+
 .block {
   height: 20px;
   border: 1px solid black;
 }
 
+
+/*Classes for exercise inline, block, inline-block*/
 .inline {
   border: 1px solid green;
   height: 30px;
@@ -28,19 +36,20 @@
   padding: 10px;
 }
 
+
+
 .display-block {
   background-color: red;
   padding: 10px;
   display: block;
 }
 
-.three {
-  display: none;
-}
 
+/*Classes for stacking blocks with float*/
 .box {
   height: 50px;
   width: 100px;
+  
 }
 
 .pink {
@@ -73,4 +82,24 @@
 
 .clear-left {
   clear: left;
+}
+
+
+/*Classes for nav bar*/
+
+.new-block{
+  clear: left;
+}
+
+.nav-bar {
+  background-color: #f1f1f1;
+  margin: 0;
+}
+
+.nav-link {
+  list-style: none;
+  display: inline-block;
+  padding: 20px 0 20px 0;
+  float: left;
+  border: 2px solid;
 }
