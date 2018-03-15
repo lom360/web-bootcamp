@@ -7,3 +7,5 @@ https://css-tricks.com/the-lengths-of-css/
 https://www.w3schools.com/colors/colors_hexadecimal.asp
 
 https://www.w3schools.com/colors/colors_picker.asp
+
+https://ide.c9.io/learnwithcolt/webdevbootcamp
