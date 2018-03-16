@@ -7,27 +7,30 @@ app.get('/',function(req,res){
 });
 
 app.get('/speak/:animal',function(req,res){
-    var animal = req.params.animal;
-    var sound = "";
-    
-    if(animal == 'pig'){
-        sound = 'oink';
-    }else if(animal == 'cow') {
-        sound = 'moo';
-    }else if(animal == 'dog'){
-        sound = 'woof';
+    var sounds = {
+        pig: "Oink",
+        cow: "Moo",
+        dog: "Woof",
+        cat: "I hate you hooman",
+        fish: "Wapapapapapaapow"
     }
     
-    res.send("The " + animal + " says " + sound + "!!!");
+    var animal = req.params.animal.toLowerCase();
+    var sound = sounds[animal];
+    
+    res.send("The " + animal + " says '" + sound + "'!!!");
 });
 
-app.get("/repeat/:word/:num",function(req,res){
-    var numPrint = Number(req.params.num);
-    var newWord = req.params.word;
-    for(var i = 1; i < numPrint; i++) {
-       newWord = newWord + " " + req.params.word;
+app.get("/repeat/:message/:times",function(req,res){
+    var times = Number(req.params.times);
+    var message = req.params.message;
+    var result = message;
+    
+    for(var i = 1; i < times; i++) {
+       result += " " + message;
     }
-    res.send(newWord);
+    
+    res.send(result);
 });
 
 app.get('*', function(req,res){
