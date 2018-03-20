@@ -7,8 +7,15 @@ var request = require('request');
 
 app.set("view engine","ejs");
 
+app.get('/', function(req, res){
+    res.render("search");
+});
+
 app.get("/results", function(req,res){
-    request("http://omdbapi.com/?s=new%20york&apikey=thewdb", function(error, response, body){
+    var query = req.query.search;
+    var apiKey = "&apikey=thewdb";
+    var url = "http://omdbapi.com/?s=" + query + apiKey;
+    request(url, function(error, response, body){
         if(!error && response.statusCode == 200){
             var data = JSON.parse(body);
             res.render("results",{data:data});
