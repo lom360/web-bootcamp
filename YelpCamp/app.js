@@ -16,18 +16,18 @@ var campgroundSchema = new mongoose.Schema({
 
 var Campground = mongoose.model("Campground", campgroundSchema); // Converting the schema into a piece of code where we'll be able to use methods.
 
-Campground.create({
-    name: "Granite Hill", 
-    image: "https://farm6.staticflickr.com/5723/21955780899_9c030cd802.jpg",
-    description: "This is a huge granite hill, no bathrooms. No water. Beautiful granite!"
-}, function(err, campground){
-    if(err){
-        console.log(err);
-    }else{
-        console.log("Newly Created Campground");
-        console.log(campground);
-    }
-});
+// Campground.create({
+//     name: "Granite Hill", 
+//     image: "https://farm6.staticflickr.com/5723/21955780899_9c030cd802.jpg",
+//     description: "This is a huge granite hill, no bathrooms. No water. Beautiful granite!"
+// }, function(err, campground){
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("Newly Created Campground");
+//         console.log(campground);
+//     }
+// });
 
 
 app.get('/',function(req,res){
@@ -41,7 +41,7 @@ app.get('/campgrounds', function(req,res){
             if(err){
                 console.log(err);
             }else{
-                res.render("campgrounds",{campgrounds:allCampgrounds});
+                res.render("index",{campgrounds:allCampgrounds});
             }
         })
         // res.render("campgrounds",{campgrounds:campgrounds});
@@ -52,7 +52,8 @@ app.post("/campgrounds", function(req, res){
     // get dat from form and add to campgrounds array.
     var name = req.body.name;
     var image = req.body.image;
-    var newCampground = {name: name, image: image}
+    var desc = req.body.description;
+    var newCampground = {name: name, image: image, description: desc}
     // Create a new campground and save to DB
     Campground.create(newCampground, function(err, newlyCreated){
         if(err){
@@ -70,10 +71,17 @@ app.get("/campgrounds/new",function(req,res){
     res.render("new.ejs");
 });
 
+//SHOW - shows more info about one campground
 app.get("/campgrounds/:id", function(req, res){
     //find the campground with provided ID
-    // render show template with that campground
-    res.send("THIS WILL BE THE SHOW PAGE ONE DAY");
+    Campground.findById(req.params.id, function(err,foundCampground){
+        if(err){
+            console.log(err);
+        } else{
+            //render show template with that campground
+            res.render("show",{campground: foundCampground});
+        }
+    });
 });
 
 app.listen(process.env.PORT, process.env.IP,function(){
