@@ -13,11 +13,28 @@
     <!-- action - where the form send data to -->
     <!-- method - what HTTP method (get/post) -->
 
-    <form action="http://wikipedia.com" method="GET">
-        <input type="text" placeholder="username">
-        <input type="password" placeholder="password">
+    <!-- Method 1 in using labels -->
+    <!-- <form action="http://wikipedia.com" method="GET">
+        <label for="">
+            Username:
+            <input name="username" type="text" placeholder="username">
+        </label>
+        <label for="">
+            Password:
+            <input name="password" type="password" placeholder="password">
+        </label>
         <input type="submit">
-    </form>
+    </form> -->
 
+
+    
+    <!-- Method 2 in using labels -->
+        <form action="http://wikipedia.com" method="GET">
+            <label for="username">Username:</label>
+            <input id="username" name="username" type="text" placeholder="username">
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" placeholder="password">
+            <input type="submit">
+        </form>
 </body>
 </html>
