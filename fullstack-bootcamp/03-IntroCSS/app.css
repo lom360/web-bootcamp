@@ -10,5 +10,12 @@ li {
 
 h4 {
     /* color: purple; */
-    color: rgba(0,200,100,.2);
+    color: rgba(0,200,100,.5);
+    background: rgb(255,100,80);
+}
+
+body { 
+    background: url(https://previews.123rf.com/images/antonel/antonel1406/antonel140600062/29496749-old-wooden-board-painted-white.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
