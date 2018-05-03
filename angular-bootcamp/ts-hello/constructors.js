@@ -1,23 +1,18 @@
-class Point {
-    x: number;
-    y: number;
-
+var Point = /** @class */ (function () {
     // Other languages like C# can have multiple constructors.
     // Typescript cannot however, so the solution is to make
     // parameters of constructors optional by adding '?'.
-    constructor(x?:number, y?:number) {
+    function Point(x, y) {
         this.x = x;
         this.y = y;
     }
-
-    draw() {
+    Point.prototype.draw = function () {
         console.log("x: " + this.x + "\n" + "y: " + this.y);
-    }
-
-    getDistance() {
+    };
+    Point.prototype.getDistance = function () {
         console.log("Something");
-    }
-}
-
-let point = new Point();
+    };
+    return Point;
+}());
+var point = new Point();
 point.draw();
