@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { INavigationItem } from './../../interfaces/navigation';
 
 @Component({
     selector: 'nav-component',
@@ -6,6 +7,29 @@ import { Component } from "@angular/core";
     styleUrls: ['./navigation.component.css']
 })
 
-export class NavComponent {
+export class NavComponent implements OnInit {
+
+    public navArr: INavigationItem[];
+
+    ngOnInit() {
+        this.navArr = [{
+            title: 'About',
+            url: '/about'
+        },
+        
+        {
+            title: 'Room',
+            url: '/room/:id'
+        },
+        {
+            title: 'Other',
+            url: '/other'
+        },
+        {
+            title: 'Pineapple',
+            url: '/pineapple'
+        }
+    ]}
+
 
 }
