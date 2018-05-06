@@ -1,0 +1,1 @@
+import { LikeComponents } from "./like.component";
