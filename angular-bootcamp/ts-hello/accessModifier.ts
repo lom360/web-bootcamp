@@ -3,12 +3,17 @@
 // By default all members are public.
 
 class Point {
-    private x: number;
-    private y: number;
+    //private x: number;
+    //private y: number;
 
-    constructor(x?: number, y?: number) {
-        this.x = x;
-        this.y = y;
+    // We can can initialized the access modifiers with
+    // parameters of the constructors. Hence the reason why the
+    // above declarations a commented out. Also the variables 
+    // will automatically be set with the same varibles. Hence
+    // the reason why the items in the constructor are commented out.
+    constructor(private x?: number, private y?: number) {
+        //this.x = x;
+        //this.y = y;
     }
 
     draw() {
