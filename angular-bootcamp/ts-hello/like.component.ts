@@ -1,5 +1,5 @@
 export class LikeComponents {
-    constructor(public likesCount:number, public isSelected:boolean){
+    constructor(private _likesCount:number, private _isSelected:boolean){
     }
 
     onClick() {
@@ -14,12 +14,21 @@ export class LikeComponents {
         // The statment below is uses a "conditional operator".
         // If you are going to have only an "if and else" and
         // no "else if", then this can be much cleaner.
-        this.likesCount += (this.isSelected) ? -1 : 1;
+        this._likesCount += (this._isSelected) ? -1 : 1;
 
         // The code below represents a way
         // to toggle the value of "isSelected".
         // Instead of using the two statement
         // in the if-else statement to toggle.
-        this.isSelected = !this.isSelected;
+        this._isSelected = !this._isSelected;
+    }
+
+    // The properties below allow us to access the fields.
+    get likesCount(){
+        return this._likesCount;
+    }
+
+    get isSelected(){
+        return this._isSelected;
     }
 }

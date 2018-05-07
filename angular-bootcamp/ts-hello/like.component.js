@@ -1,9 +1,9 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var LikeComponents = /** @class */ (function () {
-    function LikeComponents(likesCount, isSelected) {
-        this.likesCount = likesCount;
-        this.isSelected = isSelected;
+    function LikeComponents(_likesCount, _isSelected) {
+        this._likesCount = _likesCount;
+        this._isSelected = _isSelected;
     }
     LikeComponents.prototype.onClick = function () {
         // if (this.isSelected) {
@@ -16,13 +16,28 @@ var LikeComponents = /** @class */ (function () {
         // The statment below is uses a "conditional operator".
         // If you are going to have only an "if and else" and
         // no "else if", then this can be much cleaner.
-        this.likesCount += (this.isSelected) ? -1 : 1;
+        this._likesCount += (this._isSelected) ? -1 : 1;
         // The code below represents a way
         // to toggle the value of "isSelected".
         // Instead of using the two statement
         // in the if-else statement to toggle.
-        this.isSelected = !this.isSelected;
+        this._isSelected = !this._isSelected;
     };
+    Object.defineProperty(LikeComponents.prototype, "likesCount", {
+        // The properties below allow us to access the fields.
+        get: function () {
+            return this._likesCount;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LikeComponents.prototype, "isSelected", {
+        get: function () {
+            return this._isSelected;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return LikeComponents;
 }());
 exports.LikeComponents = LikeComponents;
