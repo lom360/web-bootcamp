@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
   title = "List of courses";
-  courses = ["course1", "course2", "course3"];
+  courses;
 
   constructor() { }
 
@@ -32,4 +32,6 @@ export class CourseComponent implements OnInit {
   getTitle() {
     return this.title;
   }
+
+  // The only logic components should have is the presentation logic
 }
