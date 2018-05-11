@@ -39,3 +39,12 @@ elements from the "DOM".
 
 <!-- ngModel is used for two-way binding -->
 <input type="text" [(ngModel)]="email" (keyup.enter)="onKeyIn()">
+
+
+{{ pipes.title | uppercase }} <br>
+{{ pipes.students | number }} <br>
+<!-- With the "number" pipe we can control the max and min decimals as shown below -->
+{{ pipes.rating | number:'1.2-2' }} <br> 
+<!-- We can add multiple pipe properties as shown below -->
+{{ pipes.price | currency:'AUD':true:'3.2-2' }} <br>
+{{ pipes.releaseDate | date:'shortDate' }} <br>

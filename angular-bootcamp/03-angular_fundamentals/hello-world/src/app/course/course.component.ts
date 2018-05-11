@@ -12,6 +12,13 @@ export class CourseComponent implements OnInit {
   isActive = true;
   courses;
   email = "me@example.com";
+  pipes = {
+    title: "The Complete Angular Course",
+    rating: 4.9745,
+    students: 30123,
+    price: 190.95,
+    releaseDate: new Date(2016, 3, 1)
+    }
 
   //By adding that parameter in the constructor.
   // What will happen is that "service" will be instantiated by "CoursesServcie".
