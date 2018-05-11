@@ -43,6 +43,10 @@ export class CourseComponent implements OnInit {
     console.log("Enter was pressed");
   }
 
+  onKeyIn(email) {
+    console.log(email);
+  }
+
 
   // The only logic components should have is the presentation logic
 }

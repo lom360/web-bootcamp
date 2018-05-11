@@ -31,3 +31,7 @@ elements from the "DOM".
 <!-- The uncommented version is the better method. It's called event filtering. -->
 <!-- <input type="text" (keyup)="onKeyUp($event)"> -->
 <input type="text" (keyup.enter)="onKeyUp()">
+
+<!-- Using '#' we are creating a variable. The example below we are creating the variable 'email' -->
+<!-- This is called "template variables" -->
+<input type="text" #email (keyup.enter)="onKeyIn(email.value)">
