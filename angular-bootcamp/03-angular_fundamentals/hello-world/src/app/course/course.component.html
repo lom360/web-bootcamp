@@ -26,3 +26,8 @@ elements from the "DOM".
 <!-- <button class='btn btn-primary' [class.active]="isActive">Save</button> -->
 
 <button class="btn" (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
+
+<!-- Angular has a better method to show what key was pressed. -->
+<!-- The uncommented version is the better method. It's called event filtering. -->
+<!-- <input type="text" (keyup)="onKeyUp($event)"> -->
+<input type="text" (keyup.enter)="onKeyUp()">

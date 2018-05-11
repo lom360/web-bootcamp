@@ -30,8 +30,19 @@ export class CourseComponent implements OnInit {
 
   //"$event" is an object that list the different characteristics of the event. e.g. mouse position, movement
   onSave($event) {
-    event.stopPropagation(); // This is to prevent "event bubbling".
+    $event.stopPropagation(); // This is to prevent "event bubbling".
     console.log("Button was clicked",$event);
   }
+
+  // The "method" below is an old method. Angular has a better method which is the next one over. 
+  // onKeyUp($event) {
+  //   if($event.keyCode === 13) console.log("Enter was pressed");
+  // }
+
+  onKeyUp() {
+    console.log("Enter was pressed");
+  }
+
+
   // The only logic components should have is the presentation logic
 }
