@@ -12,13 +12,17 @@ export class CourseComponent implements OnInit {
   isActive = true;
   courses;
   email = "me@example.com";
-  pipes = {
+  
+  pipes = {// This object is for practicing and understanding "pipes" in angular.
     title: "The Complete Angular Course",
     rating: 4.9745,
     students: 30123,
     price: 190.95,
     releaseDate: new Date(2016, 3, 1)
     }
+
+  // Below we are practicing custom pipes.
+  lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
   //By adding that parameter in the constructor.
   // What will happen is that "service" will be instantiated by "CoursesServcie".
