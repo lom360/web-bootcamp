@@ -25,4 +25,4 @@ elements from the "DOM".
 <!-- It will be added to the class attribute if it encounters a certain condition -->
 <!-- <button class='btn btn-primary' [class.active]="isActive">Save</button> -->
 
-<button [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
+<button class="btn" (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>

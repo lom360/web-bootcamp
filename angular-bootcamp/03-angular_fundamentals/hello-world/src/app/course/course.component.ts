@@ -28,5 +28,10 @@ export class CourseComponent implements OnInit {
     return this.title;
   }
 
+  //"$event" is an object that list the different characteristics of the event. e.g. mouse position, movement
+  onSave($event) {
+    event.stopPropagation(); // This is to prevent "event bubbling".
+    console.log("Button was clicked",$event);
+  }
   // The only logic components should have is the presentation logic
 }
