@@ -18,6 +18,7 @@ import { CoursesService } from '../courses.service';
         {{ course }}
       </li>
     </ul>
+    <button class='btn btn-primary'>Save</button>
     `,
   styleUrls: ['./course.component.css'] // This will call the css file that will be used for styling.
 })
