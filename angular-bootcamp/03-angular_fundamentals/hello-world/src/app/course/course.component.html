@@ -34,4 +34,8 @@ elements from the "DOM".
 
 <!-- Using '#' we are creating a variable. The example below we are creating the variable 'email' -->
 <!-- This is called "template variables" -->
-<input type="text" #email (keyup.enter)="onKeyIn(email.value)">
+<!-- But we can do better. We want to incapsulate our files. So we should apply two way binding -->
+<!-- <input type="text" #email (keyup.enter)="onKeyIn(email.value)"> -->
+
+<!-- ngModel is used for two-way binding -->
+<input type="text" [(ngModel)]="email" (keyup.enter)="onKeyIn()">

@@ -11,6 +11,7 @@ export class CourseComponent implements OnInit {
   title = "List of courses";
   isActive = true;
   courses;
+  email = "me@example.com";
 
   //By adding that parameter in the constructor.
   // What will happen is that "service" will be instantiated by "CoursesServcie".
@@ -43,8 +44,18 @@ export class CourseComponent implements OnInit {
     console.log("Enter was pressed");
   }
 
-  onKeyIn(email) {
-    console.log(email);
+  // This example uses template variables.
+  // However two way binding should be more effiecient
+  // onKeyIn(email) {
+  //   console.log(email);
+  // }
+
+  // We are using the two-way binding method below.
+  // two-way binding vs property binding.
+  // property binding only works one way. From component to view.
+  // two-way binding work both ways. So from view to component is possible.
+  onKeyIn() {
+    console.log(this.email);
   }
 
 
