@@ -1,1 +1,5 @@
-<div><span class="btn glyphicon glyphicon-star" (click)="onToggle()" [ngClass]="setGlyphicon()"></span></div>
+<!-- The next line statment was my solution to the problem -->
+<!-- <div><span class="btn glyphicon" (click)="onToggle()" [ngClass]="setGlyphicon()"></span></div> -->
+
+<!-- The next line statment was the solution of online instructor -->
+<span class="glyphicon" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite" (click)="onClick()"></span>
