@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title-form.component.css']
 })
 export class TitleFormComponent implements OnInit {
+  title
 
   constructor() { }
 
