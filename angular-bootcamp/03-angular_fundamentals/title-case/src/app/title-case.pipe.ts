@@ -7,19 +7,16 @@ export class TitleCasePipe implements PipeTransform {
 
   transform(value: string): any {
     if (!value) return null;
-  
-
 
     let words = value.split(' '); //splits the string whenever it encounters a space or ' '.
     for (var i = 0; i < words.length; i++){
-
       let word = words[i];
       // i > 0 is to take into account if the preposition is the first word of the title
       // isPreposition is a method created below.
       if(i > 0 && this.isPreposition(word))
-        word = word.toLowerCase();
+        words[i] = word.toLowerCase();
       else
-        word = this.toTitleCase(word);
+        words[i] = this.toTitleCase(word);
     }
 
     return words.join(' ');
