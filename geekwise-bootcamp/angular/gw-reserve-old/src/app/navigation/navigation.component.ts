@@ -13,21 +13,21 @@ export class NavComponent implements OnInit {
 
     ngOnInit() {
         this.navArr = [{
-            title: 'About',
-            url: '/about'
+            title: 'Mario',
+            url: '/mario'
         },
         
         {
+            title: 'Zelda',
+            url: 'zelda'
+        },
+        {
+            title: 'Star Fox',
+            url: 'starfox'
+        },
+        {
             title: 'Room',
             url: '/room/:id'
-        },
-        {
-            title: 'Other',
-            url: '/other'
-        },
-        {
-            title: 'Pineapple',
-            url: '/pineapple'
         }
     ]}
 

@@ -2,7 +2,7 @@
     <h1>EYE EM A NAVIGATON COMPONENT!!!!!</h1>
     <ul>
         <li *ngFor="let item of navArr">
-            <a [href]="item.url">
+            <a [routerLink]="item.url">
                 <p>{{ item.title }}</p>
             </a>
         </li>
