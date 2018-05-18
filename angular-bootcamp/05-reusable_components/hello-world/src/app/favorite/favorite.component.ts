@@ -7,7 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FavoriteComponent implements OnInit {
 
-  @Input() isFavorite: boolean;
+  //The benefits of input aliasing is that if we were to change the name of our fields.
+  //It will not impact many things in your applications. For example, you won't need 
+  //to change the name in all your code. Aliasing will handle it for you.
+  @Input("isFavorite") isSelected: boolean;
 
   constructor() { 
     
@@ -18,7 +21,7 @@ export class FavoriteComponent implements OnInit {
 
 
   onClick() {
-    this.isFavorite = !this.isFavorite; 
+    this.isSelected = !this.isSelected; 
   }
 
 }
