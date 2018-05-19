@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
@@ -12,6 +12,8 @@ export class FavoriteComponent implements OnInit {
   //to change the name in all your code. Aliasing will handle it for you.
   @Input("isFavorite") isSelected: boolean;
 
+  @Output() change = new EventEmitter;
+
   constructor() { 
     
   }
@@ -21,7 +23,8 @@ export class FavoriteComponent implements OnInit {
 
 
   onClick() {
-    this.isSelected = !this.isSelected; 
+    this.isSelected = !this.isSelected;
+    this.change.emit();
   }
 
 }
