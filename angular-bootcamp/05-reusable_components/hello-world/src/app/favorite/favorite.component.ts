@@ -12,7 +12,9 @@ export class FavoriteComponent implements OnInit {
   //to change the name in all your code. Aliasing will handle it for you.
   @Input("isFavorite") isSelected: boolean;
 
-  @Output() change = new EventEmitter;
+  //Giving something with an output decorator an alias name will do the samething
+  //for an input alias. It helps with preventing our code from breaking.
+  @Output("change") click = new EventEmitter;
 
   constructor() { 
     
@@ -24,7 +26,7 @@ export class FavoriteComponent implements OnInit {
 
   onClick() {
     this.isSelected = !this.isSelected;
-    this.change.emit({ newValue: this.isSelected });
+    this.click.emit({ newValue: this.isSelected });
   }
 
 }
