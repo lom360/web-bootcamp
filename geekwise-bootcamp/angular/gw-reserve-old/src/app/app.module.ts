@@ -39,9 +39,9 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
     BrowserModule,
     RoomModule,
     AppRoutingModule,
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
