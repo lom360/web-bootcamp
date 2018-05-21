@@ -3,9 +3,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
+  // The line below is a method to write html for the compenent. It is only recommended to use when content is very small.
+  // template: ` `
   styleUrls: ['./favorite.component.css']
+  // The line below is a method to add styling to the component. This is also only recommended to use when content is very small.
+  // styles: [ ` ` ]
 })
-export class FavoriteComponent implements OnInit {
+export class FavoriteComponent  {
 
   //The benefits of input aliasing is that if we were to change the name of our fields.
   //It will not impact many things in your applications. For example, you won't need 
@@ -15,14 +19,6 @@ export class FavoriteComponent implements OnInit {
   //Giving something with an output decorator an alias name will do the samething
   //for an input alias. It helps with preventing our code from breaking.
   @Output("change") click = new EventEmitter;
-
-  constructor() { 
-    
-  }
-
-  ngOnInit() {
-  }
-
 
   onClick() {
     this.isSelected = !this.isSelected;
