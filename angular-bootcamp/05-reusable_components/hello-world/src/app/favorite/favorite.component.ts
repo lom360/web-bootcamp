@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ViewEncapsulation } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-favorite',
@@ -8,6 +9,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./favorite.component.css']
   // The line below is a method to add styling to the component. This is also only recommended to use when content is very small.
   // styles: [ ` ` ]
+  // The property below is hardly used. It's something that can manipulate the shadow dom.
+  // ViewEncapsulation:
 })
 export class FavoriteComponent  {
 
