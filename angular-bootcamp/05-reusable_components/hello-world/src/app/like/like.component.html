@@ -1,3 +1,8 @@
-<p>
-  like works!
-</p>
+<div>
+  <span 
+    class="glyphicon glyphicon-heart" 
+    [class.highlighted]="isSelected" 
+    (click)="onClick()">
+  </span>
+  <span>{{ count }}</span>
+</div>
