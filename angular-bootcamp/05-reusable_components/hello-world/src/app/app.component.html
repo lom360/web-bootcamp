@@ -1,4 +1,5 @@
 <app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+
 <app-panel>
     <!-- <div class="heading">Heading</div> -->
     <!-- The benefit of ng-container is that it only adds the content and no html headings or tag. -->
@@ -8,3 +9,5 @@
         <p>Some content here...</p>
     </div>
 </app-panel>
+
+<app-like [isActive]="tweet.isActive" [likesCount]="tweet.likesCount"></app-like>
