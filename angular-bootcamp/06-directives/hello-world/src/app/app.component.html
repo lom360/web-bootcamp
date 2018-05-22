@@ -1,0 +1,23 @@
+<app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+
+<app-panel>
+    <!-- <div class="heading">Heading</div> -->
+    <!-- The benefit of ng-container is that it only adds the content and no html headings or tag. -->
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+        <p>Some content here...</p>
+    </div>
+</app-panel>
+
+<app-like [isActive]="tweet.isActive" [likesCount]="tweet.likesCount"></app-like>
+
+<!-- Note the example below is not good practice. It's just to give an example -->
+<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+    List of courses
+</ng-template>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
+    
