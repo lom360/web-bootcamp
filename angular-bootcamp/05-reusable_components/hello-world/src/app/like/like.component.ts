@@ -17,8 +17,11 @@ export class LikeComponent implements OnInit {
   onClick(){
     this.isSelected = !this.isSelected;
     
-    //If the like button is pressed then count will be 1
-    //If it is unpressed then count will be 0.
-    this.count = (this.count > 0) ? 0 : 1;
+    //If the like button is pressed then add 1 to count.
+    //If the like button is unpressed then minus 1 to count.
+    this.count += (this.count > 0) ? -1 : 1;
+
+    //Below is the instructor's way of adding or subtracting 1.
+    //this.likesCount += (this.isActive) ? -1 : 1;
   }
 }
