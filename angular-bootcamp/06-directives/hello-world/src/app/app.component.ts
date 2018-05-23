@@ -26,5 +26,9 @@ export class AppComponent {
     console.log("Favorite changed: ", eventArgs);
   }
 
-  courses = [1, 2];
+  courses = [
+    { id: 1, name: 'course1 '},
+    { id: 1, name: 'course2 '},
+    { id: 1, name: 'course3 '},
+  ];
 }
