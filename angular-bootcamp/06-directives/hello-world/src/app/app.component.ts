@@ -10,6 +10,7 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 })
 export class AppComponent {
   viewMode = 'map';
+  canSave = true;
 
   post = {
     title: "Title",

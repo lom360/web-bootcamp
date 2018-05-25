@@ -48,3 +48,14 @@
         <button (click)="onRemove(course)">Remove</button>
     </li>
 </ul>
+
+
+<button
+    [ngStyle]="{
+        'backgroundColor': canSave ? 'blue' : 'gray',
+        'color': canSave ? 'white': 'black',
+        'fontWeight': canSave ? 'bold':'normal'
+    }"
+>
+    Save
+</button>
