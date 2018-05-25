@@ -13,7 +13,7 @@ export class AppComponent {
 
   post = {
     title: "Title",
-    isFavorite: true
+    isFavorite: false
   }
 
   tweet = {

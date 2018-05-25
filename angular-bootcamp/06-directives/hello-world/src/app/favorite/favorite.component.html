@@ -1,1 +1,9 @@
-<div><span class="glyphicon" (click)="onClick()" [class.glyphicon-star]="isSelected" [class.glyphicon-star-empty]="!isSelected"></span></div>
+<!-- ngClass is an example of attribute directive. It is used to edit an existing element of the DOM -->
+<div><span 
+    class="glyphicon" 
+    (click)="onClick()" 
+    [ngClass]="{
+        'glyphicon-star': isSelected,
+        'glyphicon-star-empty': !isSelected
+    }">
+</span></div>
