@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LikeComponent } from './like/like.component';
     AppComponent,
     FavoriteComponent,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule
