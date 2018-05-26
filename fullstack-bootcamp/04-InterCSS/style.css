@@ -8,6 +8,19 @@ h1 {
 }
 
 /* font-size */
+body {
+    /* We usually set font-size for body so that way using em will stay consistent. */
+    font-size: 10px;
+}
+
 h1 {
-    font-size: 200px;
+    font-size: 5.0em;
+}
+
+p {
+    font-size: 2.0em;
+}
+
+span {
+    font-size: 2.0em;
 }
