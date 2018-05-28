@@ -5,17 +5,31 @@ h1 {
 
 table {
     margin: 0 auto;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
 }
 
 
 td {
     height: 100px;
     width: 100px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
-.box1, .box2, .box3 {
+.vertical {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.horizontal {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* The examples below were my solutions */
+
+/* .box1, .box2, .box3 {
     border-top: none;
 }
 
@@ -29,7 +43,7 @@ td {
 
 .box1, .box4, .box7 {
     border-left: none;
-}
+} */
 
 
 
