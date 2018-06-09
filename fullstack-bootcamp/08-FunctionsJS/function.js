@@ -27,3 +27,18 @@ function facts(num) {
     }
     return answer;
 }
+
+// A function that converts kebab-case to snake_case.
+function kebabToSnake(str) {
+    var count = 0;
+    for(var i = 0; i < str.length; i++) {
+        if(str[i] == "-") {
+            count++;
+        }
+    }
+    while(count >= 0) {
+        str = str.replace("-","_");
+        count--;
+    }
+    return str;
+}
