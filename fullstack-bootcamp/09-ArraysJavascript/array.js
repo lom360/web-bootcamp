@@ -27,10 +27,20 @@ function sumArray(arr) {
     }
 }
 
+// Instructor's solution for sumArray.
+// Will call his solution sum to not mix up with my solution.
+function sum(arr){
+    var total = 0;
+    arr.forEach(function(element) {
+        total += element;
+    });
+    return total;
+}
+
 // Find highest value in array.
 function max(arr) {
-    var max = -9999;
-    for(var i = 0; i < arr.length; i++) {
+    var max = arr[0];
+    for(var i = 1; i < arr.length; i++) {
         if(max < arr[i]) {
             max = arr[i];
         }
