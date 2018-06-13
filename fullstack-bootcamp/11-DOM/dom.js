@@ -14,6 +14,10 @@ var p7 = document.querySelector("body p#first");
 
 var p8 = document.getElementsByTagName("p")[0];
 
+// This will get the p tag adjacent to the h1
+// Although there are a lot of tricks to selecting
+// different tag names. Most of the time it is not
+// necessary.
 var p9 = document.querySelector("h1 + p");
 
 console.log(p1);
