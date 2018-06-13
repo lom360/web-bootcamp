@@ -1,30 +1,50 @@
 var movies = [
     {
         haveWatched: true,
-        name: "In Bruges",
+        title: "In Bruges",
         ratings: 5
     },
     {
         haveWatched: false,
-        name: "Frozen",
+        title: "Frozen",
         ratings: 4.5
     },
     {
         haveWatched: true,
-        name: "Mad Max Fury Road",
+        title: "Mad Max Fury Road",
         ratings: 5
     },
     {
         haveWatched: false,
-        name: "Les Miserables",
+        title: "Les Miserables",
         ratings: 3.5
     }
 ]
 
-for(var i = 0; i < movies.length; i++) {
-    if(movies[i].haveWatched == true) {
-        console.log("You have watched " + '"' + movies[i].name + '"' + " - " + String(movies[i].ratings) + "stars");
+// MY SOLUTION
+// for(var i = 0; i < movies.length; i++) {
+//     if(movies[i].haveWatched == true) {
+//         console.log("You have watched " + '"' + movies[i].title + '"' + " - " + String(movies[i].ratings) + "stars");
+//     } else {
+//         console.log("You have not seen " + '"' + movies[i].title + '"' + " - " + String(movies[i].ratings) + "stars");
+//     }
+// }
+
+
+// INSTRUCTOR'S SOLUTION
+movies.forEach(function(movie){
+    console.log(buildString(movie));
+    
+});
+
+function buildString(movie){
+    var result = "You have";
+    if(movie.haveWatched) {
+        result += " watched ";
     } else {
-        console.log("You have not seen " + '"' + movies[i].name + '"' + " - " + String(movies[i].ratings) + "stars");
+        result += " not seen ";
     }
+    result += "\"" + movie.title + "\" - ";
+    result += movie.ratings + " stars";
+    return result;
 }
