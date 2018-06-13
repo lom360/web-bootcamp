@@ -12,6 +12,10 @@ var p6 = document.querySelector("body p.special");
 
 var p7 = document.querySelector("body p#first");
 
+var p8 = document.getElementsByTagName("p")[0];
+
+var p9 = document.querySelector("h1 + p");
+
 console.log(p1);
 console.log(p2);
 console.log(p3);
@@ -19,3 +23,5 @@ console.log(p4);
 console.log(p5);
 console.log(p6);
 console.log(p7);
+console.log(p8);
+console.log(p9);
