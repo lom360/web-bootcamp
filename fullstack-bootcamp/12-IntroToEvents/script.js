@@ -1,14 +1,23 @@
+// All comments was my solution.
 var btn = document.querySelector("button");
-var body = document.body;
-var toggle = false;
+// var body = document.body.style;
+// var toggled = false;
 
 
+// btn.addEventListener("click", function(){
+//     if(toggled) {
+//         body.background = "white";
+//     } else {
+//         body.background = "purple";
+//     }
+
+//     toggled = !toggled;
+// });
+
+
+
+
+// Instructor's solution using classList.toggle
 btn.addEventListener("click", function(){
-    if(toggle) {
-        body.style.background = "white";
-    } else {
-        body.style.background = "purple";
-    }
-
-    toggle = !toggle;
-});
+    document.body.classList.toggle("purple");
+})
