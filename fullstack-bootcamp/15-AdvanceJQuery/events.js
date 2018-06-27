@@ -31,9 +31,8 @@ $("button").on("mouseleave", function() {
 });
 
 $('#btn').on("click", function(){
-    $("div").fadeOut(1000, function(){
-        $(this).remove();
-        console.log("Fade Completed");
+    // $("div").fadeIn(1000);
+    $("div").slideToggle(5000, function(){
+        console.log("SLIDE IS DONE");
     });
-
 });
