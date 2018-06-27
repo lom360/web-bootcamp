@@ -26,6 +26,14 @@ $("button").on("mouseenter", function(){
     $(this).css("font-weight", "bold");
 });
 
-$("button").on("mouseleave", function () {
+$("button").on("mouseleave", function() {
     $(this).css("font-weight", "normal");
+});
+
+$('#btn').on("click", function(){
+    $("div").fadeOut(1000, function(){
+        $(this).remove();
+        console.log("Fade Completed");
+    });
+
 });
