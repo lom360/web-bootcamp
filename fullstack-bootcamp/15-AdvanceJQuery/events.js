@@ -36,3 +36,10 @@ $('#btn').on("click", function(){
         console.log("SLIDE IS DONE");
     });
 });
+
+$('#btn').on("click", function () {
+    // $("div").fadeIn(1000);
+    $("div").slideToggle(5000, function () {
+        console.log("SLIDE IS DONE");
+    });
+});
