@@ -1,5 +1,10 @@
 body {
     font-family: Roboto;
+    background: -webkit-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    background: -moz-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    background: -ms-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    background: -o-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    background: linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
 }
 
 h1 {
