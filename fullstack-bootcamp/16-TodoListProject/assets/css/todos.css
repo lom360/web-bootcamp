@@ -17,6 +17,10 @@ h1 {
     font-weight: normal;
 }
 
+.fa-plus {
+    float: right;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -32,6 +36,14 @@ li {
 
 li:nth-child(2n) {
     background-color: #f7f7f7;
+}
+
+span {
+    background: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
 }
 
 input {
